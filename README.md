@@ -1,6 +1,6 @@
 # Desafio Prático — Estágio AI & Data Lab | Bari
 
-> Status: em desenvolvimento. As Partes 1 e 2 têm uma primeira versão; a Parte 3 tem esquema, referência inicial, extração e avaliador, mas ainda depende de execução e revisão humana. O diário e o resumo executivo têm rascunhos que o candidato deve revisar.
+> Status: em desenvolvimento. As Partes 1 e 2 têm uma primeira versão; a Parte 3 tem esquema, referência inicial, extração e avaliador, mas ainda depende de execução e revisão.
 
 ## Objetivo
 
