@@ -1,0 +1,27 @@
+2026-09-26 19:19:47,243 | INFO | Início do processamento do funil.
+2026-09-26 19:19:47,380 | INFO | Auditoria concluída: 6400 linhas originais; 5865 para análise.
+2026-09-26 19:19:47,380 | WARNING | Existem 1 propostas com etapa fora do dicionário.
+2026-09-26 19:19:47,380 | INFO | Relatório HTML salvo em C:\testeBari\saida\relatorio_funil.html
+2026-09-26 19:19:47,380 | INFO | Fim do processamento.
+2026-09-26 19:21:04,963 | INFO | Início do processamento do funil.
+2026-09-26 19:21:05,106 | INFO | Auditoria concluída: 6400 linhas originais; 5865 para análise.
+2026-09-26 19:21:05,106 | WARNING | Existem 1 propostas com etapa fora do dicionário.
+2026-09-26 19:21:05,106 | INFO | Relatório HTML salvo em C:\testeBari\saida\relatorio_funil.html
+2026-09-26 19:21:05,106 | INFO | Fim do processamento.
+2026-09-26 19:21:12,175 | INFO | Início do processamento do funil.
+2026-09-26 19:21:12,313 | INFO | Auditoria concluída: 6400 linhas originais; 5865 para análise.
+2026-09-26 19:21:12,313 | WARNING | Existem 1 propostas com etapa fora do dicionário.
+2026-09-26 19:21:12,313 | INFO | Relatório HTML salvo em C:\testeBari\saida\relatorio_funil.html
+2026-09-26 19:21:12,313 | INFO | Fim do processamento.
+2026-09-26 19:22:08,931 | INFO | Início do processamento do funil.
+2026-09-26 19:22:09,059 | WARNING | A janela mais recente tem apenas 2 propostas; interprete a taxa semanal com cautela.
+2026-09-26 19:22:09,067 | INFO | Auditoria concluída: 6400 linhas originais; 5865 para análise.
+2026-09-26 19:22:09,067 | WARNING | Existem 1 propostas com etapa fora do dicionário.
+2026-09-26 19:22:09,068 | INFO | Relatório HTML salvo em C:\testeBari\saida\relatorio_funil.html
+2026-09-26 19:22:09,068 | INFO | Fim do processamento.
+2026-09-26 19:23:17,365 | INFO | Início do processamento do funil.
+2026-09-26 19:23:17,494 | WARNING | A janela mais recente tem apenas 2 propostas; interprete a taxa semanal com cautela.
+2026-09-26 19:23:17,502 | INFO | Auditoria concluída: 6400 linhas originais; 5865 para análise.
+2026-09-26 19:23:17,502 | WARNING | Existem 1 propostas com etapa fora do dicionário.
+2026-09-26 19:23:17,502 | INFO | Relatório HTML salvo em C:\testeBari\saida\relatorio_funil.html
+2026-09-26 19:23:17,502 | INFO | Fim do processamento.

@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/esquema-laudo-bari.json",
+  "title": "Laudo de avaliação imobiliária extraído",
+  "description": "Formato único para os campos solicitados na Parte 3. Valores ausentes ou não confirmados não devem ser inferidos.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "arquivo_origem",
+    "tipo_imovel",
+    "endereco",
+    "areas",
+    "ano_construcao",
+    "valor_avaliacao_brl",
+    "matricula",
+    "onus",
+    "data_vistoria",
+    "responsavel_tecnico"
+  ],
+  "$defs": {
+    "campo_texto": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["valor", "status", "evidencias", "observacao"],
+      "properties": {
+        "valor": { "type": ["string", "null"] },
+        "status": {
+          "enum": ["encontrado", "ausente", "nao_aplicavel", "ambiguo", "conflitante"]
+        },
+        "evidencias": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "observacao": { "type": ["string", "null"] }
+      }
+    },
+    "campo_numero": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["valor", "status", "evidencias", "observacao"],
+      "properties": {
+        "valor": { "type": ["number", "null"] },
+        "status": {
+          "enum": ["encontrado", "ausente", "nao_aplicavel", "ambiguo", "conflitante"]
+        },
+        "evidencias": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "observacao": { "type": ["string", "null"] }
+      }
+    }
+  },
+  "properties": {
+    "arquivo_origem": { "type": "string" },
+    "tipo_imovel": { "$ref": "#/$defs/campo_texto" },
+    "endereco": { "$ref": "#/$defs/campo_texto" },
+    "areas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["privativa_m2", "total_m2", "construida_m2", "terreno_m2", "comum_m2"],
+      "properties": {
+        "privativa_m2": { "$ref": "#/$defs/campo_numero" },
+        "total_m2": { "$ref": "#/$defs/campo_numero" },
+        "construida_m2": { "$ref": "#/$defs/campo_numero" },
+        "terreno_m2": { "$ref": "#/$defs/campo_numero" },
+        "comum_m2": { "$ref": "#/$defs/campo_numero" }
+      }
+    },
+    "ano_construcao": { "$ref": "#/$defs/campo_numero" },
+    "valor_avaliacao_brl": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["valor", "rotulo_no_laudo", "status", "evidencias", "observacao"],
+      "properties": {
+        "valor": { "type": ["number", "null"], "minimum": 0 },
+        "rotulo_no_laudo": { "type": ["string", "null"] },
+        "status": {
+          "enum": ["encontrado", "ausente", "ambiguo", "conflitante"]
+        },
+        "evidencias": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "observacao": { "type": ["string", "null"] }
+      }
+    },
+    "matricula": { "$ref": "#/$defs/campo_texto" },
+    "onus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["classificacao", "descricao", "evidencias", "observacao"],
+      "properties": {
+        "classificacao": {
+          "enum": [
+            "onus_identificado",
+            "sem_onus_informado",
+            "nao_informado",
+            "nao_verificado",
+            "cancelado_com_ressalva",
+            "conflitante"
+          ]
+        },
+        "descricao": { "type": ["string", "null"] },
+        "evidencias": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "observacao": { "type": ["string", "null"] }
+      }
+    },
+    "data_vistoria": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["valor", "status", "evidencias", "observacao"],
+      "properties": {
+        "valor": { "type": ["string", "null"], "format": "date" },
+        "status": {
+          "enum": ["encontrado", "ausente", "ambiguo", "conflitante"]
+        },
+        "evidencias": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "observacao": { "type": ["string", "null"] }
+      }
+    },
+    "responsavel_tecnico": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nome", "registro_profissional", "status", "evidencias", "observacao"],
+      "properties": {
+        "nome": { "type": ["string", "null"] },
+        "registro_profissional": { "type": ["string", "null"] },
+        "status": {
+          "enum": ["encontrado", "ausente", "ambiguo", "conflitante"]
+        },
+        "evidencias": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "observacao": { "type": ["string", "null"] }
+      }
+    }
+  }
+}
