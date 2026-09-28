@@ -18,8 +18,6 @@ Investigar, com os dados fictícios fornecidos no desafio, onde as propostas de 
 - `saida/relatorio_funil.html`: relatório HTML gerado pelo script.
 - `saida/execucao.log`: log da execução mais recente.
 
-A automação da Parte 2 tem uma primeira versão. Na Parte 3, os 17 laudos foram comparados com a referência revisada: houve concordância em 442 de 442 valores e status, sem divergências ou avisos de evidência. Isso demonstra consistência com a referência revisada, não acurácia independente. O diário e o resumo executivo ainda precisam da revisão pessoal do candidato.
-
 ## Como executar a análise atual
 
 1. Abra o terminal na pasta do projeto e ative o ambiente virtual em que instalou o pandas.
