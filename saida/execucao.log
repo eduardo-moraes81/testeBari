@@ -25,3 +25,9 @@
 2026-09-26 19:23:17,502 | WARNING | Existem 1 propostas com etapa fora do dicionário.
 2026-09-26 19:23:17,502 | INFO | Relatório HTML salvo em C:\testeBari\saida\relatorio_funil.html
 2026-09-26 19:23:17,502 | INFO | Fim do processamento.
+2026-09-28 11:42:39,103 | INFO | Início do processamento do funil.
+2026-09-28 11:42:39,246 | WARNING | A janela mais recente tem apenas 2 propostas; interprete a taxa semanal com cautela.
+2026-09-28 11:42:39,253 | INFO | Auditoria concluída: 6400 linhas originais; 5865 para análise.
+2026-09-28 11:42:39,253 | WARNING | Existem 1 propostas com etapa fora do dicionário.
+2026-09-28 11:42:39,253 | INFO | Relatório HTML salvo em C:\testeBari\saida\relatorio_funil.html
+2026-09-28 11:42:39,253 | INFO | Fim do processamento.

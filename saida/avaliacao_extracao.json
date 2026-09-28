@@ -1,0 +1,144 @@
+{
+  "status_referencia": "provisoria_requer_revisao_humana",
+  "documentos_referencia": 17,
+  "documentos_extraidos": 17,
+  "documentos_comparados": 17,
+  "campos_corretos": 442,
+  "campos_comparados": 442,
+  "concordancia_normalizada": 1.0,
+  "por_campo": {
+    "ano_construcao.status": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "ano_construcao.valor": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "areas.comum_m2.status": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "areas.comum_m2.valor": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "areas.construida_m2.status": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "areas.construida_m2.valor": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "areas.privativa_m2.status": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "areas.privativa_m2.valor": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "areas.terreno_m2.status": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "areas.terreno_m2.valor": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "areas.total_m2.status": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "areas.total_m2.valor": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "data_vistoria.status": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "data_vistoria.valor": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "endereco.status": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "endereco.valor": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "matricula.status": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "matricula.valor": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "onus.classificacao": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "responsavel_tecnico.nome": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "responsavel_tecnico.registro_profissional": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "responsavel_tecnico.status": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "tipo_imovel.status": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "tipo_imovel.valor": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "valor_avaliacao_brl.status": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    },
+    "valor_avaliacao_brl.valor": {
+      "corretos": 17,
+      "comparados": 17,
+      "concordancia": 1.0
+    }
+  },
+  "divergencias": [],
+  "avisos_de_evidencia": [],
+  "observacao": "Concordância provisória porque a referência ainda precisa de validação humana. A métrica compara valores e status, normaliza acentos/caixa/pontuação e aceita diferenças numéricas até 0,01. Evidências são checadas literalmente; a métrica não julga a qualidade semântica das justificativas."
+}

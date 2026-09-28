@@ -1,9 +1,3 @@
-"""Desafio Bari: auditoria inicial e preparação da base de propostas.
-
-Esta primeira versão cobre o começo da Parte 1. As métricas e o relatório
-serão acrescentados depois que as regras de tratamento estiverem claras.
-"""
-
 from pathlib import Path
 from datetime import datetime
 import logging
@@ -11,17 +5,14 @@ import logging
 import pandas as pd
 
 
-# O caminho é relativo ao local do próprio script. Assim, o projeto pode ser
-# movido para outro computador sem precisar alterar um caminho absoluto.
 PASTA_PROJETO = Path(__file__).resolve().parent
 ARQUIVO_CSV = PASTA_PROJETO / "propostas_credito.csv"
 PASTA_SAIDA = PASTA_PROJETO / "saida"
-ARQUIVO_RELATORIO = PASTA_SAIDA / "relatorio_funil.html"
 ARQUIVO_LOG = PASTA_SAIDA / "execucao.log"
-# Alerta operacional para taxas com poucos casos; não é um teste estatístico.
+ARQUIVO_RELATORIO = PASTA_SAIDA / "relatorio_funil.html"
 MINIMO_PROPOSTAS_ALERTA_SEMANAL = 30
 
-# O enunciado manda retirar Terreno antes de realizar a análise do CSV.
+
 COLUNAS_OBRIGATORIAS = {
     "id_proposta",
     "data_entrada",
@@ -42,7 +33,7 @@ def carregar_base(caminho: Path = ARQUIVO_CSV) -> pd.DataFrame:
     if not caminho.exists():
         raise FileNotFoundError(f"Arquivo de entrada não encontrado: {caminho}")
 
-    # utf-8-sig também funciona para UTF-8 comum e remove eventual BOM do cabeçalho.
+    
     dados = pd.read_csv(caminho, encoding="utf-8-sig", low_memory=False)
     colunas_ausentes = COLUNAS_OBRIGATORIAS - set(dados.columns)
     if colunas_ausentes:
@@ -73,21 +64,16 @@ def preparar_base(dados: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, int]]:
     """Padroniza campos usados na análise e aplica a exclusão de Terreno."""
     base = dados.copy()
 
-    # A coluna contém três valores com prefixo "R$". Removemos apenas o prefixo
-    # e convertemos o restante para número; valores impossíveis viram ausentes.
     valor_imovel_original = base["valor_imovel"].astype("string")
     valor_imovel_limpo = valor_imovel_original.str.replace(r"^\s*R\$\s*", "", regex=True)
     base["valor_imovel"] = pd.to_numeric(valor_imovel_limpo, errors="coerce")
     valores_imovel_invalidos = int(base["valor_imovel"].isna().sum())
 
-    # Há datas ISO e três datas no formato brasileiro dd/mm/aaaa.
     base["data_entrada"] = pd.to_datetime(
         base["data_entrada"], format="mixed", dayfirst=True, errors="coerce"
     )
     datas_invalidas = int(base["data_entrada"].isna().sum())
 
-    # Padronizamos espaços, caixa e grafia para não contar variações do mesmo canal
-    # como categorias diferentes. Ex.: "mídia paga " e "Mídia paga".
     canal_original = base["canal_origem"].astype("string")
     canal_chave = canal_original.str.strip().str.casefold()
     nomes_canais = {
@@ -100,12 +86,8 @@ def preparar_base(dados: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, int]]:
     }
     base["canal_origem"] = canal_chave.map(nomes_canais).fillna(canal_original.str.strip())
 
-    # O dicionário menciona LTV, mas a coluna não veio no CSV. Calculamos a razão
-    # entre o valor solicitado e o valor do imóvel e deixamos como proporção.
     base["ltv"] = base["valor_solicitado"] / base["valor_imovel"]
 
-    # A exclusão de Terreno é uma regra explícita do enunciado. Preservamos a
-    # contagem removida para documentar e explicar seu efeito na análise.
     terrenos_removidos = int(base["tipo_imovel"].str.strip().str.casefold().eq("terreno").sum())
     base_analise = base.loc[
         ~base["tipo_imovel"].str.strip().str.casefold().eq("terreno")
@@ -129,8 +111,6 @@ def calcular_metricas(base: pd.DataFrame) -> dict[str, pd.DataFrame]:
     """Monta três tabelas para investigar perdas, canais e evolução mensal."""
     nao_contratadas = base.loc[base["status_final"] != "Contratada"].copy()
 
-    # Uma proposta aparece em apenas uma etapa: a última que alcançou.
-    # Somamos o crédito solicitado das propostas não contratadas nessa etapa.
     perdas_por_etapa = (
         nao_contratadas.groupby("etapa_max_funil", as_index=False)
         .agg(
@@ -159,8 +139,6 @@ def calcular_metricas(base: pd.DataFrame) -> dict[str, pd.DataFrame]:
         .sort_values("taxa_contratacao", ascending=False)
     )
 
-    # A coorte é definida pelo mês de entrada. A taxa compara quantas propostas
-    # daquele mês terminaram contratadas com o total que entrou naquele mês.
     base_com_mes = base.assign(mes_entrada=base["data_entrada"].dt.to_period("M"))
     contratacao_mensal = (
         base_com_mes.assign(contratada=base_com_mes["status_final"].eq("Contratada"))
@@ -172,7 +150,6 @@ def calcular_metricas(base: pd.DataFrame) -> dict[str, pd.DataFrame]:
         )
     )
 
-    # Uma comparação por ano resume o movimento sem depender de um mês isolado.
     base_com_ano = base.assign(ano_entrada=base["data_entrada"].dt.year)
     contratacao_anual = (
         base_com_ano.assign(contratada=base_com_ano["status_final"].eq("Contratada"))
@@ -184,9 +161,6 @@ def calcular_metricas(base: pd.DataFrame) -> dict[str, pd.DataFrame]:
         )
     )
 
-    # O arquivo do desafio é histórico. Ancoramos a janela móvel de sete dias
-    # na data mais recente presente nele, e não na data do computador, para que
-    # o relatório continue útil quando for demonstrado com esta base sintética.
     data_final_arquivo = base["data_entrada"].max().normalize()
     inicio_semana_atual = data_final_arquivo - pd.Timedelta(days=6)
     fim_semana_anterior = inicio_semana_atual - pd.Timedelta(days=1)
@@ -222,8 +196,8 @@ def calcular_metricas(base: pd.DataFrame) -> dict[str, pd.DataFrame]:
         ]
     )
 
-    # Criamos faixas para comparar perfis. Os quartis são definidos pela própria
-    # distribuição dos dados; as faixas de LTV usam o limite de 60% citado no desafio.
+    
+    
     base_perfis = base.copy()
     base_perfis["faixa_ltv"] = pd.cut(
         base_perfis["ltv"],
@@ -276,10 +250,10 @@ def calcular_metricas(base: pd.DataFrame) -> dict[str, pd.DataFrame]:
         nao_contratadas["etapa_max_funil"].eq(3)
         & nao_contratadas["status_final"].eq("Sem retorno")
     ]
-    meta_reengajamento_sem_retorno = 0.10  # hipótese para dimensionar um piloto
+    meta_reengajamento_sem_retorno = 0.10  
 
-    # Comparar canais dentro da mesma faixa de LTV ajuda a verificar se a
-    # diferença bruta entre canais é explicada apenas pelo perfil de garantia.
+    
+    
     contratacao_canal_ltv = (
         base_perfis.assign(contratada=base_perfis["status_final"].eq("Contratada"))
         .groupby(["canal_origem", "faixa_ltv"], observed=True, as_index=False)
@@ -300,14 +274,14 @@ def calcular_metricas(base: pd.DataFrame) -> dict[str, pd.DataFrame]:
         )
         .sort_values(["faixa_score", "taxa_contratacao"], ascending=[True, False])
     )
-    # Mostra como os desfechos se distribuem dentro de cada canal. Normalize
-    # por linha para comparar canais de tamanhos diferentes.
+    
+    
     status_por_canal = pd.crosstab(
         base["canal_origem"], base["status_final"], normalize="index"
     ).mul(100).round(1)
 
-    # Compara correspondentes e outros canais atendidos pelo mesmo consultor.
-    # Exigimos pelo menos 20 propostas em cada grupo antes de exibir a comparação.
+    
+    
     contratada = base["status_final"].eq("Contratada")
     eh_correspondente = base["canal_origem"].eq("Correspondente")
     por_consultor_correspondente = (

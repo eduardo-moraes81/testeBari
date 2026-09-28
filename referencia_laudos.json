@@ -107,7 +107,7 @@
     "tipo_imovel": {"valor": "sala comercial", "status": "encontrado", "evidencias": ["sala comercial 503"], "observacao": null},
     "endereco": {"valor": "sala 503, Edifício Horizonte, Rua do Comércio, 77, Curitiba/PR", "status": "encontrado", "evidencias": ["sala comercial 503, Edifício Horizonte, Rua do Comércio, 77, Curitiba/PR"], "observacao": null},
     "areas": {
-      "privativa_m2": {"valor": 54.8, "status": "ambiguo", "evidencias": ["Área útil 54,8 m²"], "observacao": "O laudo chama esta medida de área útil; não afirma que seja área privativa."},
+      "privativa_m2": {"valor": null, "status": "ambiguo", "evidencias": ["Área útil 54,8 m²"], "observacao": "O laudo informa 54,8 m² como área útil, mas não confirma que seja área privativa; o valor não foi atribuído a este campo."},
       "total_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null},
       "construida_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null},
       "terreno_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null},
@@ -127,7 +127,7 @@
     "areas": {
       "privativa_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null},
       "total_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null},
-      "construida_m2": {"valor": null, "status": "nao_aplicavel", "evidencias": ["Tipo: terreno urbano"], "observacao": "O laudo descreve um terreno e não informa edificação."},
+      "construida_m2": {"valor": null, "status": "ausente", "evidencias": ["Tipo: terreno urbano"], "observacao": "O laudo identifica o bem como terreno urbano, mas não declara expressamente que não haja edificação nem informa área construída."},
       "terreno_m2": {"valor": 360, "status": "encontrado", "evidencias": ["Área do terreno: 360 m2"], "observacao": null},
       "comum_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null}
     },
@@ -140,7 +140,7 @@
   },
   {
     "arquivo_origem": "laudo_05.txt",
-    "tipo_imovel": {"valor": "imóvel rural, Sítio Boa Vista", "status": "encontrado", "evidencias": ["imóvel rural denominado Sítio Boa Vista"], "observacao": null},
+    "tipo_imovel": {"valor": "imóvel rural", "status": "encontrado", "evidencias": ["imóvel rural denominado Sítio Boa Vista"], "observacao": null},
     "endereco": {"valor": "Município de Campinas, UF SP", "status": "encontrado", "evidencias": ["Município de Campinas, UF SP."], "observacao": "O laudo não informa logradouro ou número."},
     "areas": {
       "privativa_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null},
@@ -261,8 +261,8 @@
     "valor_avaliacao_brl": {"valor": 2450000, "rotulo_no_laudo": "Avaliação final", "status": "encontrado", "evidencias": ["Avaliação final R$ 2.450.000,00."], "observacao": null},
     "matricula": {"valor": "88.710", "status": "encontrado", "evidencias": ["Matrícula 88.710."], "observacao": null},
     "onus": {"classificacao": "nao_informado", "descricao": "Ônus reais não informados.", "evidencias": ["Ônus reais não informados."], "observacao": null},
-    "data_vistoria": {"valor": "2025-05-16", "status": "ambiguo", "evidencias": ["Data do levantamento: 16/05/2025."], "observacao": "O laudo informa a data do levantamento, mas não afirma que seja a data da vistoria."},
-    "responsavel_tecnico": {"nome": "Marcos Vieira", "registro_profissional": "Eng. Civil, CREA-SP 5099988776", "status": "encontrado", "evidencias": ["Elaborado por: Marcos Vieira, Eng. Civil, CREA-SP 5099988776."], "observacao": null}
+    "data_vistoria": {"valor": null, "status": "ambiguo", "evidencias": ["Data do levantamento: 16/05/2025."], "observacao": "O laudo informa a data do levantamento, mas não afirma que seja a data da vistoria; o valor não foi atribuído a este campo."},
+    "responsavel_tecnico": {"nome": "Marcos Vieira", "registro_profissional": "CREA-SP 5099988776", "status": "encontrado", "evidencias": ["Elaborado por: Marcos Vieira, Eng. Civil, CREA-SP 5099988776."], "observacao": null}
   },
   {
     "arquivo_origem": "laudo_12.txt",
@@ -275,7 +275,7 @@
       "terreno_m2": {"valor": 600, "status": "encontrado", "evidencias": ["terreno com 600 m²"], "observacao": null},
       "comum_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null}
     },
-    "ano_construcao": {"valor": 2012, "status": "encontrado", "evidencias": ["Ano informado: 2012"], "observacao": null},
+    "ano_construcao": {"valor": null, "status": "ambiguo", "evidencias": ["Ano informado: 2012"], "observacao": "O laudo informa um ano, mas não especifica a que evento ele se refere; não é possível afirmar que seja o ano de construção."},
     "valor_avaliacao_brl": {"valor": 2180000, "rotulo_no_laudo": "Preço/valor de avaliação", "status": "encontrado", "evidencias": ["Preço/valor de avaliação: R$ 2.180.000,00"], "observacao": null},
     "matricula": {"valor": "54.122", "status": "encontrado", "evidencias": ["Matrícula 54.122."], "observacao": null},
     "onus": {"classificacao": "onus_identificado", "descricao": "Servidão de passagem registrada.", "evidencias": ["Ônus: servidão de passagem registrada."], "observacao": null},
@@ -287,7 +287,7 @@
     "tipo_imovel": {"valor": "apartamento", "status": "encontrado", "evidencias": ["Apartamento, Av. Brasil 1770"], "observacao": null},
     "endereco": {"valor": "Av. Brasil 1770, ap. 1201, Rio de Janeiro/RJ", "status": "encontrado", "evidencias": ["Av. Brasil 1770, ap. 1201, Rio de Janeiro/RJ."], "observacao": null},
     "areas": {
-      "privativa_m2": {"valor": 112, "status": "ambiguo", "evidencias": ["Área útil: 112,00m²."], "observacao": "O laudo usa o termo área útil, sem afirmar que corresponda à área privativa."},
+      "privativa_m2": {"valor": null, "status": "ambiguo", "evidencias": ["Área útil: 112,00m²."], "observacao": "O laudo informa 112,00 m² como área útil, mas não confirma que seja área privativa; o valor não foi atribuído a este campo."},
       "total_m2": {"valor": 155, "status": "encontrado", "evidencias": ["Área total: 155,00m²."], "observacao": null},
       "construida_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null},
       "terreno_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null},
@@ -307,7 +307,7 @@
     "areas": {
       "privativa_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null},
       "total_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null},
-      "construida_m2": {"valor": 1450, "status": "ambiguo", "evidencias": ["Área coberta: 1.450 m²"], "observacao": "O documento informa área coberta; não confirma que a medida seja equivalente à área construída."},
+      "construida_m2": {"valor": null, "status": "ambiguo", "evidencias": ["Área coberta: 1.450 m²"], "observacao": "O documento informa 1.450 m² de área coberta, mas não confirma que seja a área construída; o valor não foi atribuído a este campo."},
       "terreno_m2": {"valor": 3000, "status": "encontrado", "evidencias": ["terreno: 3.000 m²"], "observacao": null},
       "comum_m2": {"valor": null, "status": "ausente", "evidencias": [], "observacao": null}
     },
@@ -334,7 +334,7 @@
     "matricula": {"valor": "39.240", "status": "encontrado", "evidencias": ["Matrícula 39.240."], "observacao": null},
     "onus": {"classificacao": "onus_identificado", "descricao": "Hipoteca ativa, conforme certidão consultada.", "evidencias": ["A certidão consultada informa hipoteca ativa."], "observacao": null},
     "data_vistoria": {"valor": "2025-06-12", "status": "encontrado", "evidencias": ["Inspeção: 12/06/2025."], "observacao": null},
-    "responsavel_tecnico": {"nome": "Patrícia Gomes", "registro_profissional": "Eng. Civil, CREA-PR 123123", "status": "encontrado", "evidencias": ["Patrícia Gomes, Eng. Civil, CREA-PR 123123."], "observacao": null}
+    "responsavel_tecnico": {"nome": "Patrícia Gomes", "registro_profissional": "CREA-PR 123123", "status": "encontrado", "evidencias": ["Patrícia Gomes, Eng. Civil, CREA-PR 123123."], "observacao": null}
   },
   {
     "arquivo_origem": "laudo_16.txt",

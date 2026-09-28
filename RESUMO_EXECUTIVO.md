@@ -1,21 +1,22 @@
-# Resumo executivo
+# Resumo executivo — Funil de propostas de crédito
 
-## Diagnóstico
+## Mensagem principal
 
-Após remover as 535 propostas de terrenos conforme o desafio, a base de análise ficou com **5.865 propostas**, das quais **1.128 foram contratadas**. A maior concentração de crédito solicitado entre propostas não contratadas está na etapa 3: **1.657 propostas e R$ 649,8 milhões solicitados**. O valor representa crédito pedido, não receita ou perda financeira realizada.
+Após a exclusão de terrenos, conforme o desafio, foram analisadas **5.865 propostas**: **1.128 viraram contratos**, uma conversão geral de **19,2%**. Os dados indicam oportunidades para investigar o canal de correspondentes e melhorar o acompanhamento de propostas sem retorno. Eles orientam testes; não provam, por si só, a causa dos resultados.
 
-A conversão anual foi de **20,3% em 2024** e **18,4% em 2025**. Correspondentes converteram **13,7%** (223 de 1.627), contra **21,4%** nos demais canais. A diferença persistiu na maioria dos recortes por LTV, score e consultor, mas a análise é observacional e não demonstra causalidade.
+## O que os dados mostram
 
-## Recomendações priorizadas
+- **Correspondentes convertem menos:** 13,7% (223 contratos em 1.627 propostas), contra 21,4% nos demais canais. A diferença de 7,7 pontos percentuais também aparece na maioria das comparações por perfil e consultor analisadas.
+- **A etapa 3 concentra propostas sem contratação:** são 1.657 propostas não contratadas, associadas a **R$ 649,8 milhões em crédito solicitado**. Desse grupo, 526 ficaram sem retorno, com R$ 207,7 milhões solicitados.
+- **Há propostas acima do limite de LTV informado:** 904 ultrapassam 60%, incluindo 109 contratadas. Isso precisa ser reconciliado com a regra e os dados antes de classificar casos como violações.
+- A conversão anual foi de **20,3% em 2024** e **18,4% em 2025**. Essa diferença não demonstra, sozinha, uma queda contínua nem explica suas causas.
 
-1. **Investigar e testar melhorias no canal de correspondentes.** A diferença bruta de 7,7 pontos percentuais equivale a cerca de **124 contratos adicionais** em um cenário hipotético no qual o canal atingisse a taxa combinada dos demais. Tratar esse número como potencial para dimensionar um piloto, não como previsão.
-2. **Revisar propostas com LTV acima de 60%.** São **904 propostas**, das quais 109 foram contratadas, associadas a R$ 468,9 milhões solicitados. Confirmar a fórmula e as exceções com a área de negócio antes de interpretar os casos como violações.
-3. **Testar contato de recuperação para propostas sem retorno na etapa 3.** São **526 propostas**, com R$ 207,7 milhões solicitados. Uma meta hipotética de reengajar 10% alcançaria cerca de 53 propostas e R$ 20,8 milhões em crédito solicitado associado; não implica novos contratos.
+## Decisões recomendadas
 
-## Automação e extração de laudos
+1. **Testar melhorias no canal de correspondentes.** Investigar qualificação e acompanhamento das propostas e comparar os resultados de um piloto com um período ou grupo de referência. Se o canal alcançasse a conversão dos demais, o cenário matemático seria de cerca de **124 contratos adicionais**; isso é uma simulação, não uma previsão.
+2. **Testar contato de recuperação na etapa 3.** Medir quantos clientes sem retorno respondem e quantos avançam no funil. Reengajar 10% dos 526 casos seria cerca de 53 propostas; não significa 53 contratos.
+3. **Validar os casos de LTV acima de 60%.** Confirmar fórmula, qualidade dos valores e possíveis exceções com as áreas responsáveis antes de mudar a operação.
 
-A rotina da Parte 2 lê o CSV, aplica os tratamentos documentados e gera relatório HTML e log. A Parte 3 tem um esquema estruturado, referência inicial para 17 laudos, script de extração via API e avaliador de divergências. **A extração ainda não foi executada**; depende de chave de API configurada localmente, pode gerar cobrança e requer revisão humana da referência e das respostas.
+## Limites da análise
 
-## Limites
-
-Os resultados são descritivos; grupos podem diferir em características não observadas. A base tem poucos registros nas janelas semanais recentes, então as taxas semanais são instáveis. Valores solicitados não equivalem a perdas, receita ou lucro. A saída estruturada da IA não substitui a conferência do texto original.
+Os resultados são descritivos: grupos podem diferir em fatores que não foram observados, então não permitem afirmar que o canal causou a conversão menor. Valores solicitados representam crédito pedido, não receita, lucro ou perda realizada. As recomendações devem ser testadas e acompanhadas por indicadores antes de uma decisão ampla.

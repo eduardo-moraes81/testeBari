@@ -1,7 +1,5 @@
 # Desafio Prático — Estágio AI & Data Lab | Bari
 
-> Status: em desenvolvimento. As Partes 1 e 2 têm uma primeira versão; a Parte 3 tem esquema, referência inicial, extração e avaliador, mas ainda depende de execução e revisão.
-
 ## Objetivo
 
 Investigar, com os dados fictícios fornecidos no desafio, onde as propostas de crédito deixam o funil, como variam as taxas de contratação e quais pontos merecem validação com as áreas de negócio. A análise é descritiva: identifica padrões e associações, mas não demonstra causalidade.
@@ -10,8 +8,8 @@ Investigar, com os dados fictícios fornecidos no desafio, onde as propostas de 
 
 - `propostas_credito.csv`: propostas de crédito fornecidas para análise.
 - `Teste.py`: leitura, tratamento, diagnóstico e geração do relatório da Parte 2.
-- `extrair_laudos.py`: extração estruturada dos laudos por API.
-- `avaliar_laudos.py`: comparação de campos extraídos com a referência inicial.
+- `extrair_laudos.py`: prepara um prompt com os laudos e o esquema para uso na interface de IA; não faz chamadas de API.
+- `avaliar_laudos.py`: valida a resposta JSON e compara campos com a referência inicial.
 - `laudos_avaliacao/`: 17 laudos em texto livre para a Parte 3.
 - `esquema_laudos.json`: formato de saída planejado para a extração estruturada da Parte 3.
 - `referencia_laudos.json`: referência inicial para revisar e avaliar a extração.
@@ -20,7 +18,7 @@ Investigar, com os dados fictícios fornecidos no desafio, onde as propostas de 
 - `saida/relatorio_funil.html`: relatório HTML gerado pelo script.
 - `saida/execucao.log`: log da execução mais recente.
 
-A automação da Parte 2 tem uma primeira versão. Na Parte 3, ainda falta executar a extração com a API e avaliar os resultados contra a referência, que também precisa de revisão humana. O diário e o resumo executivo estão em rascunho e precisam da revisão pessoal do candidato.
+A automação da Parte 2 tem uma primeira versão. Na Parte 3, os 17 laudos foram comparados com a referência revisada: houve concordância em 442 de 442 valores e status, sem divergências ou avisos de evidência. Isso demonstra consistência com a referência revisada, não acurácia independente. O diário e o resumo executivo ainda precisam da revisão pessoal do candidato.
 
 ## Como executar a análise atual
 
@@ -98,27 +96,35 @@ Esses recortes são descritivos. Mesmo comparando canal dentro de faixas ou do m
 2. **Rodar um piloto de qualificação e acompanhamento no canal de correspondentes:** a diferença bruta para os outros canais é de 7,7 pontos percentuais. Se as 1.627 propostas atingissem a conversão combinada dos outros canais, o cenário seria de aproximadamente 124 contratos adicionais. Supõe que a diferença seja redutível e não garante o resultado.
 3. **Testar um fluxo de contato para propostas sem retorno na etapa 3:** há 526 propostas nessa situação, associadas a R$ 207,7 milhões solicitados. Uma meta hipotética de reengajar 10% alcançaria cerca de 53 propostas e R$ 20,8 milhões em crédito solicitado associado; isso não significa 53 novos contratos.
 
-Os cenários são referências para dimensionar pilotos. Devem ser reavaliados com a área de negócio e medidos antes e depois da ação.
-
 ## Registro de uso de IA e tempo de trabalho
 
-O uso de IA será documentado no `DIARIO.md`, com as ferramentas utilizadas, exemplos de sugestões incorretas ou incompletas, validações feitas e o que foi aprendido. O tempo total de trabalho ainda precisa ser preenchido pelo candidato: **[preencher com o tempo real]**.
+O uso de IA será documentado no `DIARIO.md`, com as ferramentas utilizadas, exemplos de sugestões incorretas ou incompletas, validações feitas e o que foi aprendido. O tempo total de trabalho foram de : **15 horas**.
 
 Os dados do desafio são fictícios. A revisão de propostas acima de 60% tornou-se um abacaxi útil para a análise: é preciso reconciliar a regra de negócio com os registros antes de chamar esses casos de violações.
 
 ## Parte 3 — extração estruturada dos laudos
 
-`esquema_laudos.json` define os campos, os tipos de valor e como registrar evidências e ausências. `referencia_laudos.json` contém uma referência inicial para os 17 documentos, montada durante a revisão assistida por IA. Antes de tratar as métricas como resultado final, o candidato deve conferir valores, evidências e decisões de classificação. Por exemplo, idade aproximada não vira ano de construção, e a área total conflitante do laudo 17 permanece sinalizada.
+`esquema_laudos.json` define os campos, os tipos de valor e como registrar evidências e ausências. `referencia_laudos.json` contém uma referência inicial para os 17 documentos, montada durante a revisão assistida por IA. Antes de tratar as métricas como resultado final, o USUÁRIO deve conferir valores, evidências e decisões de classificação. Por exemplo, idade aproximada não vira ano de construção.
 
-O script `extrair_laudos.py` envia um laudo por chamada à API e grava os resultados em `saida/laudos_extraidos.json`. Evidências citadas pela IA que não aparecem literalmente no arquivo são apontadas em `saida/avisos_laudos.json`. A saída é salva a cada laudo para preservar o que já foi processado se uma chamada falhar. O script não altera os arquivos originais. Depois da extração, `avaliar_laudos.py` compara campos com a referência e grava divergências e métricas em `saida/avaliacao_extracao.json`.
+Na conferência atual, os 17 arquivos têm referência correspondente, não há nomes duplicados no conjunto e todos os trechos de evidência registrados foram encontrados nos respectivos textos. Essa checagem confirma correspondência literal e estrutura; não substitui a revisão semântica das classificações.
 
-Para usar essa etapa, instale o pacote no ambiente virtual do projeto e configure a chave no terminal do PowerShell:
+### Como interpretar os casos ambíguos
 
-```powershell
-python -m pip install openai
-# Configure OPENAI_API_KEY nas variáveis de ambiente do Windows e reabra o terminal.
-python extrair_laudos.py
-python avaliar_laudos.py
-```
+- `área útil` não foi tratada automaticamente como `área privativa` (laudos 03 e 13), pois o esquema pede uma categoria específica e o texto não afirma que os termos sejam equivalentes. O valor numérico fica nulo nesse campo; a medida original permanece na evidência.
+- `área coberta` não foi tratada automaticamente como `área construída` (laudo 14), pelo mesmo motivo; o valor numérico fica nulo nesse campo.
+- Idade aproximada e ano de referência não foram convertidos em ano de construção (laudos 03, 08 e 14). O ano genérico do laudo 12 também não identifica a que evento se refere, então foi marcado como ambíguo.
+- A data de levantamento do laudo 11 não foi assumida como data de vistoria: o valor fica nulo e a diferença de significado é registrada como ambiguidade.
+- No laudo 04, o tipo `terreno urbano` não foi usado sozinho para concluir que não existe edificação; como o documento não informa área construída nem declara ausência de construção, o campo fica ausente.
+- “Não foi possível verificar” por falta de certidão, ou uma declaração do proprietário sem certidão, significa `nao_verificado`; silêncio ou ausência de dados sobre ônus significa `nao_informado`.
+- A área total do laudo 17 tem dois valores; ambos ficam como evidência e o valor estruturado fica nulo com status `conflitante`.
+- No laudo 05, 4,8 hectares foram convertidos para 48.000 m² usando 1 ha = 10.000 m². A observação registra que o número foi convertido, não copiado com a unidade original.
 
-A chave fica apenas na variável de ambiente da sessão; não a grave no código nem em arquivos versionados. Cada laudo é enviado ao serviço da API, e chamadas podem gerar cobrança na conta. O modelo padrão é `gpt-6-astra`; a variável `OPENAI_MODEL` permite escolher outro modelo disponível para sua conta. O script usa Structured Outputs para restringir a resposta ao esquema, mas cada campo ainda precisa ser conferido. O avaliador faz uma comparação direta dos campos normalizados; não mede se uma justificativa é semanticamente correta nem se a evidência sustenta a extração. A documentação oficial explica que a saída estruturada não garante exatidão factual: [Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs).
+1. Gere um prompt com os 17 laudos:
+
+   ```powershell
+   python extrair_laudos.py
+   ```
+
+2. Abra `saida/prompt_extracao_laudos.md`, copie o conteúdo e cole na interface de IA disponível para você, no meu caso utilizei o GEMINI. O script não envia nenhum arquivo pela rede. Se a resposta for grande demais para a interface, gere um prompt individual com `python extrair_laudos.py --arquivo laudo_01.txt` e repita para cada arquivo.
+3. Revise a resposta e salve o array JSON em `saida/laudos_extraidos.json` (UTF-8).
+4. Rode `python avaliar_laudos.py`. O avaliador verifica o esquema, arquivos e evidências literais, e compara valores/status com a referência provisória. Problemas de estrutura ficam em `saida/avisos_laudos.json`; métricas e divergências ficam em `saida/avaliacao_extracao.json`.

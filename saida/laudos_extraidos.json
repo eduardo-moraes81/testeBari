@@ -1,1 +1,1783 @@
-[]
+[
+{
+"arquivo_origem": "laudo_01.txt",
+"tipo_imovel": {
+"valor": "apartamento residencial",
+"status": "encontrado",
+"evidencias": [
+"Imóvel: apartamento residencial"
+],
+"observacao": "O esquema JSON fornecido exige que todos os campos (campo_texto e campo_numero) possuam uma chave chamada 'valor'. Portanto, o tipo do imóvel está corretamente alocado nesta chave."
+},
+"endereco": {
+"valor": "Rua das Acácias, 145, ap. 82 - Vila Mariana, São Paulo/SP",
+"status": "encontrado",
+"evidencias": [
+"Endereço: Rua das Acácias, 145, ap. 82 - Vila Mariana, São Paulo/SP"
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": 78.4,
+"status": "encontrado",
+"evidencias": [
+"Área privativa: 78,40 m²"
+],
+"observacao": null
+},
+"total_m2": {
+"valor": 102.1,
+"status": "encontrado",
+"evidencias": [
+"área total: 102,10 m²"
+],
+"observacao": null
+},
+"construida_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"terreno_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": 2014,
+"status": "encontrado",
+"evidencias": [
+"Ano de construção: 2014"
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 642000.0,
+"rotulo_no_laudo": "Valor de avaliação",
+"status": "encontrado",
+"evidencias": [
+"Valor de avaliação: R$ 642.000,00"
+],
+"observacao": "O valor monetário da avaliação está alocado aqui, conforme o objeto 'valor_avaliacao_brl' do esquema."
+},
+"matricula": {
+"valor": "184.772 do 14º CRI de São Paulo",
+"status": "encontrado",
+"evidencias": [
+"Matrícula: 184.772 do 14º CRI de São Paulo"
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "sem_onus_informado",
+"descricao": "não foram identificados ônus na certidão analisada.",
+"evidencias": [
+"Ônus: não foram identificados ônus na certidão analisada."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-03-12",
+"status": "encontrado",
+"evidencias": [
+"Vistoria realizada em 12/03/2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Marina Albuquerque",
+"registro_profissional": "CREA-SP 5061234567",
+"status": "encontrado",
+"evidencias": [
+"Responsável técnico: Eng. Marina Albuquerque - CREA-SP 5061234567."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_02.txt",
+"tipo_imovel": {
+"valor": "casa térrea",
+"status": "encontrado",
+"evidencias": [
+"Trata-se de uma casa térrea"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Av. Central, 900, bloco B, Belo Horizonte - MG.",
+"status": "encontrado",
+"evidencias": [
+"Localização do bem: Av. Central, 900, bloco B, Belo Horizonte - MG."
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"total_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"construida_m2": {
+"valor": 146.0,
+"status": "encontrado",
+"evidencias": [
+"com 146,00 m2 de área construída"
+],
+"observacao": null
+},
+"terreno_m2": {
+"valor": 250.0,
+"status": "encontrado",
+"evidencias": [
+"lote de 250 m²"
+],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": 2008,
+"status": "encontrado",
+"evidencias": [
+"Construída em 2008."
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 680000.0,
+"rotulo_no_laudo": "Estimativa de mercado",
+"status": "encontrado",
+"evidencias": [
+"Estimativa de mercado: seiscentos e oitenta mil reais (R$ 680.000)."
+],
+"observacao": null
+},
+"matricula": {
+"valor": "45.981, Cartório do 3º Ofício",
+"status": "encontrado",
+"evidencias": [
+"Registro imobiliário nº 45.981, Cartório do 3º Ofício."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "sem_onus_informado",
+"descricao": "sem gravames conhecidos.",
+"evidencias": [
+"Certidão: sem gravames conhecidos."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-03-18",
+"status": "encontrado",
+"evidencias": [
+"Data da inspeção: 18/03/2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Carlos Henrique Moura",
+"registro_profissional": "CAU A123456-7",
+"status": "encontrado",
+"evidencias": [
+"Avaliador: Carlos Henrique Moura, CAU A123456-7."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_03.txt",
+"tipo_imovel": {
+"valor": "sala comercial",
+"status": "encontrado",
+"evidencias": [
+"sala comercial 503"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "sala 503, Edifício Horizonte, Rua do Comércio, 77, Curitiba/PR",
+"status": "encontrado",
+"evidencias": [
+"sala comercial 503, Edifício Horizonte, Rua do Comércio, 77, Curitiba/PR"
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": null,
+"status": "ambiguo",
+"evidencias": [
+"Área útil 54,8 m²"
+],
+"observacao": "O laudo cita área útil, que conceitualmente difere de área privativa."
+},
+"total_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"construida_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"terreno_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"comum_m2": {
+"valor": 18.2,
+"status": "encontrado",
+"evidencias": [
+"área comum proporcional 18,2 m²."
+],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": null,
+"status": "ausente",
+"evidencias": [
+"Idade aparente: 11 anos."
+],
+"observacao": "Laudo cita idade aparente e não o ano de construção."
+},
+"valor_avaliacao_brl": {
+"valor": 395500.0,
+"rotulo_no_laudo": "Valor indicado",
+"status": "encontrado",
+"evidencias": [
+"Valor indicado: R$ 395.500,00."
+],
+"observacao": null
+},
+"matricula": {
+"valor": "77.201 - 5º Registro de Imóveis.",
+"status": "encontrado",
+"evidencias": [
+"Matrícula 77.201 - 5º Registro de Imóveis."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "onus_identificado",
+"descricao": "alienação fiduciária em favor de instituição financeira",
+"evidencias": [
+"Consta alienação fiduciária em favor de instituição financeira"
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-03-22",
+"status": "encontrado",
+"evidencias": [
+"Em 22 de março de 2025 vistoriamos"
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Beatriz Nunes",
+"registro_profissional": "CAU A987654-3",
+"status": "encontrado",
+"evidencias": [
+"Responsável: Arq. Beatriz Nunes (CAU A987654-3)."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_04.txt",
+"tipo_imovel": {
+"valor": "terreno urbano",
+"status": "encontrado",
+"evidencias": [
+"Tipo: terreno urbano"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Lote 18, Quadra F, Rua Ipê Amarelo, Goiânia/GO",
+"status": "encontrado",
+"evidencias": [
+"Endereço do imóvel: Lote 18, Quadra F, Rua Ipê Amarelo, Goiânia/GO"
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"total_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"construida_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"terreno_m2": {
+"valor": 360.0,
+"status": "encontrado",
+"evidencias": [
+"Área do terreno: 360 m2"
+],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": null,
+"status": "nao_aplicavel",
+"evidencias": [
+"Ano: não se aplica"
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 218000.0,
+"rotulo_no_laudo": "Valor de mercado",
+"status": "encontrado",
+"evidencias": [
+"Valor de mercado R$ 218.000"
+],
+"observacao": null
+},
+"matricula": {
+"valor": "102.334",
+"status": "encontrado",
+"evidencias": [
+"Matrícula 102.334"
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "nao_informado",
+"descricao": "nada informado no documento apresentado",
+"evidencias": [
+"Ônus e restrições: nada informado no documento apresentado"
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-04-02",
+"status": "encontrado",
+"evidencias": [
+"Data da vistoria 02/04/2025"
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Paulo Sérgio Reis",
+"registro_profissional": "CREA 12345/D-GO",
+"status": "encontrado",
+"evidencias": [
+"RT: Paulo Sérgio Reis, CREA 12345/D-GO"
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_05.txt",
+"tipo_imovel": {
+"valor": "imóvel rural",
+"status": "encontrado",
+"evidencias": [
+"imóvel rural denominado Sítio Boa Vista."
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Município de Campinas, UF SP.",
+"status": "encontrado",
+"evidencias": [
+"Município de Campinas, UF SP."
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"total_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"construida_m2": {
+"valor": 310.0,
+"status": "encontrado",
+"evidencias": [
+"benfeitorias construídas: 310 m²."
+],
+"observacao": null
+},
+"terreno_m2": {
+"valor": 48000.0,
+"status": "encontrado",
+"evidencias": [
+"Área do terreno: 4,8 ha"
+],
+"observacao": "1 ha equivale a 10.000 m2 exatos, conversão realizada para m2."
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": 1999,
+"status": "encontrado",
+"evidencias": [
+"Ano das edificações: 1999."
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 1275000.0,
+"rotulo_no_laudo": "Valor total da avaliação",
+"status": "encontrado",
+"evidencias": [
+"Valor total da avaliação: R$ 1.275.000,00."
+],
+"observacao": null
+},
+"matricula": {
+"valor": "32.110",
+"status": "encontrado",
+"evidencias": [
+"Matrícula 32.110."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "onus_identificado",
+"descricao": "reserva legal registrada; não foi apontada hipoteca.",
+"evidencias": [
+"Ônus: reserva legal registrada"
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-04-07",
+"status": "encontrado",
+"evidencias": [
+"Inspeção em 07/04/2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "João A. Farias",
+"registro_profissional": "CREA-SP 5076543210",
+"status": "encontrado",
+"evidencias": [
+"Perito avaliador: João A. Farias, CREA-SP 5076543210."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_06.txt",
+"tipo_imovel": {
+"valor": "Apartamento",
+"status": "encontrado",
+"evidencias": [
+"Apartamento situado à Rua das Palmeiras"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Rua das Palmeiras, 1.210, Recife/PE, CEP 50000-100.",
+"status": "encontrado",
+"evidencias": [
+"Rua das Palmeiras, 1.210, Recife/PE, CEP 50000-100."
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": 61.0,
+"status": "encontrado",
+"evidencias": [
+"Área privativa 61m²"
+],
+"observacao": null
+},
+"total_m2": {
+"valor": 84.0,
+"status": "encontrado",
+"evidencias": [
+"área total 84m²."
+],
+"observacao": null
+},
+"construida_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"terreno_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": 2018,
+"status": "encontrado",
+"evidencias": [
+"Imóvel com 2018 de construção."
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 455000.0,
+"rotulo_no_laudo": "Avaliação",
+"status": "encontrado",
+"evidencias": [
+"Avaliação: R$ 455.000,00"
+],
+"observacao": null
+},
+"matricula": {
+"valor": "9.876, 2º RGI do Recife.",
+"status": "encontrado",
+"evidencias": [
+"Matrícula: 9.876, 2º RGI do Recife."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "nao_informado",
+"descricao": "Não consta informação sobre ônus.",
+"evidencias": [
+"Não consta informação sobre ônus."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-04-15",
+"status": "encontrado",
+"evidencias": [
+"Vistoria: 15/04/2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Fernanda Lins",
+"registro_profissional": "CREA 18001/PE",
+"status": "encontrado",
+"evidencias": [
+"Responsável técnico: Fernanda Lins, CREA 18001/PE."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_07.txt",
+"tipo_imovel": {
+"valor": "Casa geminada",
+"status": "encontrado",
+"evidencias": [
+"Casa geminada"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Rua Azul, 33, bairro Jardim Europa, Porto Alegre - RS.",
+"status": "encontrado",
+"evidencias": [
+"Rua Azul, 33, bairro Jardim Europa, Porto Alegre - RS."
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"total_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"construida_m2": {
+"valor": 92.5,
+"status": "encontrado",
+"evidencias": [
+"área edificada 92,50 m²."
+],
+"observacao": null
+},
+"terreno_m2": {
+"valor": 125.0,
+"status": "encontrado",
+"evidencias": [
+"Terreno 125,00 m²"
+],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": 2011,
+"status": "encontrado",
+"evidencias": [
+"Ano de construção informado pelo proprietário: 2011."
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 372000.0,
+"rotulo_no_laudo": "Valor venal adotado",
+"status": "encontrado",
+"evidencias": [
+"Valor venal adotado: R$ 372.000,00."
+],
+"observacao": null
+},
+"matricula": {
+"valor": "66.504 do Registro de Imóveis da 4ª Zona.",
+"status": "encontrado",
+"evidencias": [
+"Matrícula 66.504 do Registro de Imóveis da 4ª Zona."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "onus_identificado",
+"descricao": "penhora averbada",
+"evidencias": [
+"Há penhora averbada, conforme documento consultado em 20/04/2025."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-04-20",
+"status": "encontrado",
+"evidencias": [
+"Data da vistoria: 20-04-2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Rafael Costa",
+"registro_profissional": "CREA-RS 222333",
+"status": "encontrado",
+"evidencias": [
+"Responsável: Eng. Rafael Costa, CREA-RS 222333."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_08.txt",
+"tipo_imovel": {
+"valor": "loja térrea com sobreloja",
+"status": "encontrado",
+"evidencias": [
+"Imóvel: loja térrea com sobreloja"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Rua Sete de Setembro, 410, Salvador/BA",
+"status": "encontrado",
+"evidencias": [
+"Endereço: Rua Sete de Setembro, 410, Salvador/BA"
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"total_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"construida_m2": {
+"valor": 118.0,
+"status": "encontrado",
+"evidencias": [
+"Área construída aproximada: 118 m²"
+],
+"observacao": null
+},
+"terreno_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": null,
+"status": "ausente",
+"evidencias": [
+"Ano de referência: 2005"
+],
+"observacao": "O documento não identifica esse ano como ano de construção."
+},
+"valor_avaliacao_brl": {
+"valor": 910000.0,
+"rotulo_no_laudo": "Valor de avaliação",
+"status": "encontrado",
+"evidencias": [
+"Valor de avaliação R$ 910.000,00"
+],
+"observacao": null
+},
+"matricula": {
+"valor": null,
+"status": "ausente",
+"evidencias": [
+"Matrícula não apresentada."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "nao_verificado",
+"descricao": "não foi possível verificar por ausência de certidão.",
+"evidencias": [
+"Ônus: não foi possível verificar por ausência de certidão."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-04-29",
+"status": "encontrado",
+"evidencias": [
+"Vistoria efetuada em 29/04/2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Luciana Prado",
+"registro_profissional": "CNAI 12345",
+"status": "encontrado",
+"evidencias": [
+"Avaliadora responsável: Luciana Prado - CNAI 12345."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_09.txt",
+"tipo_imovel": {
+"valor": "Casa residencial",
+"status": "encontrado",
+"evidencias": [
+"Casa residencial"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Alameda das Flores 88, Florianópolis/SC.",
+"status": "encontrado",
+"evidencias": [
+"Alameda das Flores 88, Florianópolis/SC."
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"total_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"construida_m2": {
+"valor": 198.0,
+"status": "encontrado",
+"evidencias": [
+"área construída 198,00 m²."
+],
+"observacao": null
+},
+"terreno_m2": {
+"valor": 420.0,
+"status": "encontrado",
+"evidencias": [
+"Área do lote 420,00 m²"
+],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": 2020,
+"status": "encontrado",
+"evidencias": [
+"Construção: 2020."
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 1080000.0,
+"rotulo_no_laudo": "Valor apurado",
+"status": "encontrado",
+"evidencias": [
+"Valor apurado: R$ 1.080.000,00."
+],
+"observacao": null
+},
+"matricula": {
+"valor": "12.909, 1º Ofício.",
+"status": "encontrado",
+"evidencias": [
+"Matrícula 12.909, 1º Ofício."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "sem_onus_informado",
+"descricao": "inexistência de ônus reais.",
+"evidencias": [
+"A certidão indica inexistência de ônus reais."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-05-03",
+"status": "encontrado",
+"evidencias": [
+"Inspeção presencial em 03/05/2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Thiago Martins",
+"registro_profissional": "CREA-SC 7654321",
+"status": "encontrado",
+"evidencias": [
+"Responsável técnico: Eng. Thiago Martins, CREA-SC 7654321."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_10.txt",
+"tipo_imovel": {
+"valor": "apartamento",
+"status": "encontrado",
+"evidencias": [
+"Bem avaliando: apartamento"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Condomínio Parque Norte, SQN 214, bloco C, apto 407, Brasília/DF",
+"status": "encontrado",
+"evidencias": [
+"Condomínio Parque Norte, Brasília/DF, SQN 214, bloco C, apto 407."
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": 96.3,
+"status": "encontrado",
+"evidencias": [
+"Área privativa 96,3 m²."
+],
+"observacao": null
+},
+"total_m2": {
+"valor": 127.6,
+"status": "encontrado",
+"evidencias": [
+"Área total 127,6 m²."
+],
+"observacao": null
+},
+"construida_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"terreno_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": 2016,
+"status": "encontrado",
+"evidencias": [
+"Ano de conclusão 2016."
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 735000.0,
+"rotulo_no_laudo": "Valor de mercado",
+"status": "encontrado",
+"evidencias": [
+"Valor de mercado: R$ 735.000,00."
+],
+"observacao": null
+},
+"matricula": {
+"valor": "201.443",
+"status": "encontrado",
+"evidencias": [
+"matrícula 201.443."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "onus_identificado",
+"descricao": "alienação fiduciária mencionada na matrícula.",
+"evidencias": [
+"Gravames: alienação fiduciária mencionada na matrícula."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-05-09",
+"status": "encontrado",
+"evidencias": [
+"Vistoria em 09/05/2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Denise Carvalho",
+"registro_profissional": "CREA-DF 112233",
+"status": "encontrado",
+"evidencias": [
+"Perita: Denise Carvalho, CREA-DF 112233."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_11.txt",
+"tipo_imovel": {
+"valor": "Terreno para incorporação",
+"status": "encontrado",
+"evidencias": [
+"Terreno para incorporação"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Rua Projetada 4, s/n, Santos, SP.",
+"status": "encontrado",
+"evidencias": [
+"Rua Projetada 4, s/n, Santos, SP."
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"total_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"construida_m2": {
+"valor": null,
+"status": "nao_aplicavel",
+"evidencias": [
+"Sem edificação"
+],
+"observacao": null
+},
+"terreno_m2": {
+"valor": 1020.0,
+"status": "encontrado",
+"evidencias": [
+"Superfície: 1.020 m2."
+],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": null,
+"status": "nao_aplicavel",
+"evidencias": [
+"ano de construção: inexistente."
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 2450000.0,
+"rotulo_no_laudo": "Avaliação final",
+"status": "encontrado",
+"evidencias": [
+"Avaliação final R$ 2.450.000,00."
+],
+"observacao": null
+},
+"matricula": {
+"valor": "88.710",
+"status": "encontrado",
+"evidencias": [
+"Matrícula 88.710."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "nao_informado",
+"descricao": "Ônus reais não informados.",
+"evidencias": [
+"Ônus reais não informados."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": null,
+"status": "ambiguo",
+"evidencias": [
+"Data do levantamento: 16/05/2025."
+],
+"observacao": "O laudo informa a data do levantamento, mas não afirma que seja a data da vistoria; o valor não foi atribuído a este campo."
+},
+"responsavel_tecnico": {
+"nome": "Marcos Vieira",
+"registro_profissional": "CREA-SP 5099988776",
+"status": "encontrado",
+"evidencias": [
+"Elaborado por: Marcos Vieira, Eng. Civil, CREA-SP 5099988776."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_12.txt",
+"tipo_imovel": {
+"valor": "casa de alto padrão",
+"status": "encontrado",
+"evidencias": [
+"Tipo de propriedade: casa de alto padrão"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Rua das Bromélias, 500, Lago Sul, Brasília - DF",
+"status": "encontrado",
+"evidencias": [
+"Local: Rua das Bromélias, 500, Lago Sul, Brasília - DF"
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"total_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"construida_m2": {
+"valor": 285.0,
+"status": "encontrado",
+"evidencias": [
+"Área construída de 285 m²"
+],
+"observacao": null
+},
+"terreno_m2": {
+"valor": 600.0,
+"status": "encontrado",
+"evidencias": [
+"terreno com 600 m²"
+],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": null,
+"status": "ambiguo",
+"evidencias": [
+"Ano informado: 2012"
+],
+"observacao": "O laudo informa um ano, mas não especifica a que evento ele se refere; não é possível afirmar que seja o ano de construção."
+},
+"valor_avaliacao_brl": {
+"valor": 2180000.0,
+"rotulo_no_laudo": "Preço/valor de avaliação",
+"status": "encontrado",
+"evidencias": [
+"Preço/valor de avaliação: R$ 2.180.000,00"
+],
+"observacao": null
+},
+"matricula": {
+"valor": "54.122",
+"status": "encontrado",
+"evidencias": [
+"Matrícula 54.122."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "onus_identificado",
+"descricao": "servidão de passagem registrada.",
+"evidencias": [
+"Ônus: servidão de passagem registrada."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-05-23",
+"status": "encontrado",
+"evidencias": [
+"Data da visita técnica 23/05/2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Andréa Melo",
+"registro_profissional": "CAU A445566-1",
+"status": "encontrado",
+"evidencias": [
+"Responsável pelo trabalho: Arq. Andréa Melo, CAU A445566-1."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_13.txt",
+"tipo_imovel": {
+"valor": "Apartamento",
+"status": "encontrado",
+"evidencias": [
+"Apartamento"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Av. Brasil 1770, ap. 1201, Rio de Janeiro/RJ.",
+"status": "encontrado",
+"evidencias": [
+"Av. Brasil 1770, ap. 1201, Rio de Janeiro/RJ."
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": null,
+"status": "ambiguo",
+"evidencias": [
+"Área útil: 112,00m²."
+],
+"observacao": "Foi informada área útil, e a correspondência exata para área privativa não é garantida na avaliação."
+},
+"total_m2": {
+"valor": 155.0,
+"status": "encontrado",
+"evidencias": [
+"Área total: 155,00m²."
+],
+"observacao": null
+},
+"construida_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"terreno_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": 1987,
+"status": "encontrado",
+"evidencias": [
+"Ano de construção: 1987."
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 1320000.0,
+"rotulo_no_laudo": "Valor estimado em",
+"status": "encontrado",
+"evidencias": [
+"Valor estimado em R$ 1.320.000,00."
+],
+"observacao": null
+},
+"matricula": {
+"valor": "145.230 do 7º RGI.",
+"status": "encontrado",
+"evidencias": [
+"Matrícula 145.230 do 7º RGI."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "cancelado_com_ressalva",
+"descricao": "penhora cancelada, conforme averbação; documento não informa data do cancelamento.",
+"evidencias": [
+"Ônus: penhora cancelada, conforme averbação; documento não informa data do cancelamento."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-05-30",
+"status": "encontrado",
+"evidencias": [
+"Vistoria 30/05/2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Eduardo Sampaio",
+"registro_profissional": "CNAI 67890",
+"status": "encontrado",
+"evidencias": [
+"Avaliador: Eduardo Sampaio, CNAI 67890."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_14.txt",
+"tipo_imovel": {
+"valor": "galpão industrial",
+"status": "encontrado",
+"evidencias": [
+"Identificação: galpão industrial"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Rodovia BR-116, km 12, Betim/MG",
+"status": "encontrado",
+"evidencias": [
+"Endereço: Rodovia BR-116, km 12, Betim/MG"
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"total_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"construida_m2": {
+"valor": null,
+"status": "ambiguo",
+"evidencias": [
+"Área coberta: 1.450 m²"
+],
+"observacao": "O documento informa 1.450 m² de área coberta, mas não confirma que seja a área construída; o valor não foi atribuído a este campo."
+},
+"terreno_m2": {
+"valor": 3000.0,
+"status": "encontrado",
+"evidencias": [
+"terreno: 3.000 m²"
+],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": null,
+"status": "ausente",
+"evidencias": [
+"Idade: aproximadamente 18 anos"
+],
+"observacao": "Apenas idade aproximada é fornecida. Não é possível deduzir o ano exato de construção conforme as regras."
+},
+"valor_avaliacao_brl": {
+"valor": 3900000.0,
+"rotulo_no_laudo": "Valor indicado pelo método comparativo",
+"status": "encontrado",
+"evidencias": [
+"Valor indicado pelo método comparativo: R$ 3.900.000"
+],
+"observacao": null
+},
+"matricula": {
+"valor": "70.008",
+"status": "encontrado",
+"evidencias": [
+"Matrícula: 70.008"
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "nao_informado",
+"descricao": "Não há menção a ônus.",
+"evidencias": [
+"Não há menção a ônus."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-06-05",
+"status": "encontrado",
+"evidencias": [
+"Data da vistoria: 05/06/2025"
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Sérgio Tavares",
+"registro_profissional": "CREA-MG 998877",
+"status": "encontrado",
+"evidencias": [
+"Responsável: Sérgio Tavares, CREA-MG 998877."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_15.txt",
+"tipo_imovel": {
+"valor": "casa residencial",
+"status": "encontrado",
+"evidencias": [
+"Imóvel residencial: casa"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Rua Monte Verde, 19, Curitiba-PR.",
+"status": "encontrado",
+"evidencias": [
+"Rua Monte Verde, 19, Curitiba-PR."
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"total_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"construida_m2": {
+"valor": 135.0,
+"status": "encontrado",
+"evidencias": [
+"área construída 135 m²."
+],
+"observacao": null
+},
+"terreno_m2": {
+"valor": 200.0,
+"status": "encontrado",
+"evidencias": [
+"Área do terreno 200 m²"
+],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": 2003,
+"status": "encontrado",
+"evidencias": [
+"Ano 2003."
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 590000.0,
+"rotulo_no_laudo": "Avaliação apresentada em",
+"status": "encontrado",
+"evidencias": [
+"Avaliação apresentada em R$ 590.000,00."
+],
+"observacao": null
+},
+"matricula": {
+"valor": "39.240",
+"status": "encontrado",
+"evidencias": [
+"Matrícula 39.240."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "onus_identificado",
+"descricao": "hipoteca ativa",
+"evidencias": [
+"A certidão consultada informa hipoteca ativa."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-06-12",
+"status": "encontrado",
+"evidencias": [
+"Inspeção: 12/06/2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Patrícia Gomes",
+"registro_profissional": "CREA-PR 123123",
+"status": "encontrado",
+"evidencias": [
+"Responsável técnico: Patrícia Gomes, Eng. Civil, CREA-PR 123123."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_16.txt",
+"tipo_imovel": {
+"valor": "unidade comercial",
+"status": "encontrado",
+"evidencias": [
+"Unidade comercial 14"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Unidade comercial 14, Rua do Sol, 250, Campinas/SP",
+"status": "encontrado",
+"evidencias": [
+"Unidade comercial 14, Rua do Sol, 250, Campinas/SP."
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": 42.0,
+"status": "encontrado",
+"evidencias": [
+"Área privativa: 42,00 m²."
+],
+"observacao": null
+},
+"total_m2": {
+"valor": 67.0,
+"status": "encontrado",
+"evidencias": [
+"Área total: 67,00m²."
+],
+"observacao": null
+},
+"construida_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"terreno_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": 2010,
+"status": "encontrado",
+"evidencias": [
+"Construído em 2010."
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 288000.0,
+"rotulo_no_laudo": "Valor de avaliação",
+"status": "encontrado",
+"evidencias": [
+"Valor de avaliação: R$ 288.000,00."
+],
+"observacao": null
+},
+"matricula": {
+"valor": "101.010",
+"status": "encontrado",
+"evidencias": [
+"Matrícula 101.010."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "nao_informado",
+"descricao": "sem informação.",
+"evidencias": [
+"Ônus: sem informação."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-06-19",
+"status": "encontrado",
+"evidencias": [
+"Vistoria realizada em 19/06/2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Guilherme Rocha",
+"registro_profissional": "CREA-SP 501010",
+"status": "encontrado",
+"evidencias": [
+"Responsável técnico: Guilherme Rocha, CREA-SP 501010."
+],
+"observacao": null
+}
+},
+{
+"arquivo_origem": "laudo_17.txt",
+"tipo_imovel": {
+"valor": "apartamento residencial",
+"status": "encontrado",
+"evidencias": [
+"apartamento residencial"
+],
+"observacao": null
+},
+"endereco": {
+"valor": "Rua Harmonia, 44, Vila Madalena, São Paulo/SP.",
+"status": "encontrado",
+"evidencias": [
+"Rua Harmonia, 44, Vila Madalena, São Paulo/SP."
+],
+"observacao": null
+},
+"areas": {
+"privativa_m2": {
+"valor": 70.0,
+"status": "encontrado",
+"evidencias": [
+"Área privativa 70 m²."
+],
+"observacao": null
+},
+"total_m2": {
+"valor": null,
+"status": "conflitante",
+"evidencias": [
+"No cabeçalho consta área total 95 m², porém a tabela interna registra 92 m²"
+],
+"observacao": "O laudo apresenta conflito próprio. Regras proíbem escolher um vencedor."
+},
+"construida_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"terreno_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+},
+"comum_m2": {
+"valor": null,
+"status": "ausente",
+"evidencias": [],
+"observacao": null
+}
+},
+"ano_construcao": {
+"valor": 2015,
+"status": "encontrado",
+"evidencias": [
+"Ano de construção: 2015."
+],
+"observacao": null
+},
+"valor_avaliacao_brl": {
+"valor": 610000.0,
+"rotulo_no_laudo": "Valor de avaliação",
+"status": "encontrado",
+"evidencias": [
+"Valor de avaliação: R$ 610.000,00."
+],
+"observacao": null
+},
+"matricula": {
+"valor": "176.543",
+"status": "encontrado",
+"evidencias": [
+"Matrícula 176.543."
+],
+"observacao": null
+},
+"onus": {
+"classificacao": "nao_verificado",
+"descricao": "não há ônus, segundo declaração do proprietário; certidão não anexada.",
+"evidencias": [
+"Ônus: não há ônus, segundo declaração do proprietário; certidão não anexada."
+],
+"observacao": null
+},
+"data_vistoria": {
+"valor": "2025-06-25",
+"status": "encontrado",
+"evidencias": [
+"Vistoria em 25/06/2025."
+],
+"observacao": null
+},
+"responsavel_tecnico": {
+"nome": "Marina Albuquerque",
+"registro_profissional": "CREA-SP 5061234567",
+"status": "encontrado",
+"evidencias": [
+"Responsável técnico: Marina Albuquerque, CREA-SP 5061234567."
+],
+"observacao": null
+}
+}
+]
